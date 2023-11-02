@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/listing', function () {
+Route::get('/', function () {
     return view('listing', [
         'heading' => 'Latest Listing',
         'listings' => Listing::all()
