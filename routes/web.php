@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [ListingController::class,'index']);
-
-Route::get('/listings/{id}', function ($id) {
-    return view('show', ['listing' => Listing::find($id)]);
-});
+Route::get('/listings/create', [ListingController::class,'create']);
+Route::post('/listings', [ListingController::class,'store']);
+Route::get('/listings/{id}', [ListingController::class,'show']);
